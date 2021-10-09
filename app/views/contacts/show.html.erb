@@ -1,24 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @contact.first_name %> <%= @contact.last_name %></h1>
+  <p class="lead"> <%= @contact.email %></p>
+  <hr class="my-4">
+<img src='<%=@contact.photo_url%>' alt="responsive image class="img-thumbnail">
+<br/>
+<%= link_to 'Edit', edit_contact_path(@contact),class:"btn btn-outline-dark" %> 
 
-<p>
-  <strong>First name:</strong>
-  <%= @contact.first_name %>
-</p>
+<%= link_to 'Back', contacts_path, class:"btn btn-outline-dark" %>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @contact.last_name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
 
-<p>
-  <strong>Photo url:</strong>
-  <%= @contact.photo_url %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>

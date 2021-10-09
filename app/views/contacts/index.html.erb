@@ -2,14 +2,13 @@
 
 <h1>Contacts</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-bordered table-hover ">
+  <thead class="thead-dark">
     <tr>
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
-      <th>Photo url</th>
-      <th colspan="3"></th>
+      <th colspan="3">Operation</th>
     </tr>
   </thead>
 
@@ -19,7 +18,7 @@
         <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.photo_url %></td>
+      
         <td><%= link_to 'Show', contact %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
         <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+
