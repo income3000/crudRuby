@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
-<div class="jumbotron">
+<div class="card text-center", style="border:1px solid grey">
+  <div class="card-header">
   <h1 class="display-4"><%= @contact.first_name %> <%= @contact.last_name %></h1>
   <p class="lead"> <%= @contact.email %></p>
   <hr class="my-4">
 <img src='<%=@contact.photo_url%>' alt="responsive image class="img-thumbnail">
 <br/>
-<%= link_to 'Edit', edit_contact_path(@contact),class:"btn btn-outline-dark" %> 
-
+<%= link_to 'Edit', edit_contact_path(@contact),class:"btn btn-outline-secondary" %> 
+<%= link_to 'Delete', @contact, method: :delete, data:{ confirm: 'Are you sure?'}, class:"btn btn-outline-danger" %>
 <%= link_to 'Back', contacts_path, class:"btn btn-outline-dark" %>
 </div>
-
+</div>
 
 
