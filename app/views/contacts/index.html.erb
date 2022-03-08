@@ -15,15 +15,16 @@
 
   <tbody class="tbody-dark">
     <% @contacts.each do |contact| %>
-    <% if contact.user == current_user %>
+    <%# uncomment 19 to have user permissions %>
+    <%# <% if contact.user == current_user %> 
       <tr>
        <td><%= link_to contact.first_name + ' ' + contact.last_name, contact %></td>
         <td><%= contact.email %></td>
-        <%# <td><%= contact.user_id</td> %> %>
-       
+        <%# <td><%= contact.user_id</td> %> 
+    
         <td><%= link_to 'Destroy', contact, class:"btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%# <% end %> 
     <% end %>
   </tbody>
 </table>
